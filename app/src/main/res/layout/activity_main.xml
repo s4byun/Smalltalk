@@ -24,13 +24,14 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.13">
-        </LinearLayout>
+            android:layout_weight="0.13"></LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -42,6 +43,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/custom_edittext"
                 android:imeOptions="actionGo"
+                android:paddingLeft="10dp"
                 android:inputType="textNoSuggestions|textVisiblePassword"
                 android:singleLine="true" />
         </LinearLayout>
@@ -52,20 +54,19 @@
             android:layout_height="match_parent"
             android:layout_weight="0.15">
 
-        <ImageView
-            android:id="@+id/goButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
-            android:duplicateParentState="true"
-            android:src="@drawable/gobutton" />
+            <ImageView
+                android:id="@+id/goButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:duplicateParentState="true"
+                android:src="@drawable/gobutton" />
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.05">
-        </RelativeLayout>
+            android:layout_weight="0.05"></RelativeLayout>
     </LinearLayout>
 
     <TextView
@@ -78,11 +79,14 @@
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <home.smalltalk.utils.ExtendedNumberPicker
-        android:id="@+id/numberpicker"
+    <LinearLayout
+        android:id="@+id/nplayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/border" />
+        android:layout_height="wrap_content">
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>
